@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const ProductList=(props)=>{
     useEffect(()=>{
-        console.log('props.ProductList',props.ProductList);
-        console.log("props.category", props.category);
-    },[props.ProductList, props.category])
+        console.log('props.ProductList',props.productList);
+    },[props.productList, props.category])
     return (
         <div >
             {props.category}

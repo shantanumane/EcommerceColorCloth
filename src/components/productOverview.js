@@ -2,32 +2,26 @@ import { useState } from "react";
 import ProductList from "./productList";
 
 const productItems='[{"category":"Men","productName":"Only Check Trouser","price":1000},{"category":"Men","productName":"Herschel supply","price":1300},{"category":"Men","productName":"Herschel G supply","price":1200},{"category":"Men","productName":"Herschel C Drw","price":1100},{"category":"Women","productName":"Esprit Ruffle Shirt","price":1000},{"category":"Women","productName":"Herschel supply","price":1300},{"category":"Women","productName":"Classic Trench Coat","price":1200},{"category":"Women","productName":"Front Pocket Jumper","price":1100},{"category":"Watch","productName":"Esprit Guel Shirt","price":1000},{"category":"Watch","productName":"Herschel S","price":1300},{"category":"Watch","productName":"Classic B Coat","price":800},{"category":"Watch","productName":"Front PoZZcket Jumper","price":1200}]';
-const value = [{category:"Men",productName:"Only Check Trouser",price:1000}]
 const ProductOverview=()=>{
 
-
     const [selectedCategory,setCategory]=useState('All Category');
-    const [filteredProducts,setFilteredProducts]=useState(value);
+    const [filteredProducts,setFilteredProducts]=useState(JSON.parse(productItems));
+
     function renderCetegoryComp(event)
     {
         let categoryName=event?.target?.attributes?.getNamedItem('value')?.value;
         setCategory(categoryName);
-        console.log('before',filteredProducts,categoryName)
+
         if(categoryName==='All Category')
         {
-            setFilteredProducts(productItems);
-            console.log('skipped')
+            setFilteredProducts(JSON.parse(productItems));
         }
         else{
-            console.log('not skipped',categoryName)
-            let  filter=productItems.filter(product=>product.category===categoryName);
-            console.log('not 2 skipped',filter)
-
+            let  filter=JSON.parse(productItems).filter(product=>product.category===categoryName);
             setFilteredProducts(filter);
-        }
-        console.log('after ',filteredProducts,categoryName)
-        
+        }        
     }
+    
     return(
         <div >
             <div className="grid grid-rows-2 grid-flow-col gap-1 ">
