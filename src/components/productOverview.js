@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductList from "./productList";
 
-const productItems='[{"category":"Men","productName":"Only Check Trouser","price":1000},{"category":"Men","productName":"Herschel supply","price":1300},{"category":"Men","productName":"Herschel G supply","price":1200},{"category":"Men","productName":"Herschel C Drw","price":1100},{"category":"Women","productName":"Esprit Ruffle Shirt","price":1000},{"category":"Women","productName":"Herschel supply","price":1300},{"category":"Women","productName":"Classic Trench Coat","price":1200},{"category":"Women","productName":"Front Pocket Jumper","price":1100},{"category":"Watch","productName":"Esprit Guel Shirt","price":1000},{"category":"Watch","productName":"Herschel S","price":1300},{"category":"Watch","productName":"Classic B Coat","price":800},{"category":"Watch","productName":"Front PoZZcket Jumper","price":1200}]';
+const productItems='[{"category":"Men","productName":"Only Check Trouser","price":1000,"imageUrl":"../Images/MensWear/1.jpg"},{"category":"Men","productName":"Herschel supply","price":1300,"imageUrl":"../Images/MensWear/2.jpg"},{"category":"Men","productName":"Herschel G supply","price":1200,"imageUrl":"../Images/MensWear/3.jpg"},{"category":"Men","productName":"Herschel C Drw","price":1100,"imageUrl":"../Images/MensWear/4.jpg"},{"category":"Women","productName":"Esprit Ruffle Shirt","price":1000,"imageUrl":"../Images/WomenWear/1.jpg"},{"category":"Women","productName":"Herschel supply","price":1300,"imageUrl":"../Images/WomenWear/2.jpg"},{"category":"Women","productName":"Classic Trench Coat","price":1200,"imageUrl":"../Images/WomenWear/3.jpg"},{"category":"Women","productName":"Front Pocket Jumper","price":1100,"imageUrl":"../Images/WomenWear/4.jpg"},{"category":"Watch","productName":"Esprit Guel Shirt","price":1000,"imageUrl":"../Images/Watch/1.jpg"},{"category":"Watch","productName":"Herschel S","price":1300,"imageUrl":"../Images/Watch/2.jpg"},{"category":"Watch","productName":"Classic B Coat","price":800,"imageUrl":"../Images/Watch/3.jpg"},{"category":"Watch","productName":"Front Pocket Jumper","price":1200,"imageUrl":"../Images/Watch/4.jpg"}]';
 const ProductOverview=()=>{
 
     const [selectedCategory,setCategory]=useState('All Category');
@@ -21,7 +21,7 @@ const ProductOverview=()=>{
             setFilteredProducts(filter);
         }        
     }
-    
+
     return(
         <div >
             <div className="grid grid-rows-2 grid-flow-col gap-1 ">
