@@ -9,8 +9,8 @@ const ProductList=(props)=>{
         <div className="mx-10">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
                 {props.productList.map((product)=>(
-                    <div  className="relative group ">
-                        
+                    
+                    <div  className="relative grou">
                         <Card imageUrl={product.imageUrl} title={product.productName} description={product.price} />
                     </div>
                 ))}
