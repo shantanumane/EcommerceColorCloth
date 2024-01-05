@@ -6,6 +6,7 @@ import About from "./pages/about";
 import Contact from "./pages/contact";
 import Pricing from "./pages/pricing";
 import Services from "./pages/services";
+import CategoryView from "./pages/categoryView";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/Pricing" element={<Pricing />} />
                 <Route path="/Services" element={<Services />} />
+                <Route path="/CategoryView" element={<CategoryView />}/>
         </Routes>
     </BrowserRouter>
   );
