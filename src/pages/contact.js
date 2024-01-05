@@ -1,5 +1,14 @@
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+
 const Contact = () => {
-    return <h1>Contact</h1>;
+    return (
+      <div>
+        <Navbar/>
+          <h1>Contact</h1>
+        <Footer/>
+      </div>
+    );
   };
   
   export default Contact;
