@@ -1,6 +1,6 @@
 import Layout from '../components/layout';
 
-const Home = () => {
+const Home = (props) => {
     return <Layout/>;
   };
   
